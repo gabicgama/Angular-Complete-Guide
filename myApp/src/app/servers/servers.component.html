@@ -14,6 +14,8 @@ no exemplo abaixo, o input event é inicializado automaticamente e a propriedade
 [disabled]="!allowNewServer"
 (click)="onCreateServer()">Add Server</button>
 <!-- <h3>{{serverCreationStatus}}</h3> -->
+
+<!-- Diretivas -->
 <h3 *ngIf="serverCreated; else noServer">Server as created, server name is {{serverName}}</h3>
 <ng-template #noServer>
     <h3>
