@@ -1,5 +1,9 @@
 <label>Server name</label>
-<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+<!-- exemplo de event binding, passando o dado do evento input para p método atualizar a variável serverName-->
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> --> 
+
+<!-- 2 way biding, uma forma alternativa ao event biding para atualizar o serverName
+no exemplo abaixo, o input event é inicializado automaticamente e a propriedade é atualizada-->
 <input type="text" class="form-control" [(ngModel)]="serverName">
 
 <!-- <p>{{serverName}}</p> -->

@@ -11,24 +11,32 @@ Esse AppComponent por sua vez é declarado no arquivo 'app.component.ts'. Nele t
 
 Dado isso, o Angular já identificou onde está localizado o componente, e no arquivo de template principal, o 'index.html' da página que será renderizada, temos a tag '<app-root></app-root>' que é o seletor definido naquele componente. A esse ponto, o Angular substitui o conteudo desse selector pelo template que o componente indicou.
 
+- CONSTRUCTOR
+
+É executado no tempo em que o componente é criado pelo angular.
 
 - DATABINDING
 
 Comunicação entre o código typescript com o template html
 
->Interpolação de string
+>Interpolation de string
 {{ data }}
 
 Onde data é um typescript expression. Pode ser uma propriedade de classe ou então uma função que retorna um valor que pode ser escrito como string.
 
->Propriedade binding
+>Property binding
 [property] = "data"
 
 exemplo a propriedade disabled de um elemento html ser ligada a uma variavel booleana
 
->Event click
+>Event binding
+<buttom (click)="onClickDoSomething()">
 
+>$event 
+Essa expressão nos da acesso ao dado que é passado pelo evento 
 
-- CONSTRUCTOR
+> 2 way binding
 
-É executado no tempo em que o componente é criado pelo angular.
+Combina as duas formas, property e event binding. 
+[(ngModel)] >> combina [] da propriedade e () do event, juntamente com uma diretiva do angular 'ngModel'
+
